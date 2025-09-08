@@ -4,14 +4,10 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Todo API',
+      title: 'My Express API',
       version: '1.0.0',
-      description: 'REST API for a simple Todo application (Express + MongoDB).',
-    },
-    tags: [
-      { name: 'Health', description: 'Service health' },
-      { name: 'Todos', description: 'Todo management' },
-    ],
+      description: 'A simple Express API documented with Swagger',
+    }
   },
   apis: ['./src/routes/*.js'], // Path to the API docs
 };

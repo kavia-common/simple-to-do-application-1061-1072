@@ -1,6 +1,5 @@
 const express = require('express');
 const healthController = require('../controllers/health');
-const todosRoutes = require('./todos');
 
 const router = express.Router();
 // Health endpoint
@@ -10,7 +9,6 @@ const router = express.Router();
  * /:
  *   get:
  *     summary: Health endpoint
- *     tags: [Health]
  *     responses:
  *       200:
  *         description: Service health check passed
@@ -33,8 +31,5 @@ const router = express.Router();
  *                   example: development
  */
 router.get('/', healthController.check.bind(healthController));
-
-// Mount Todos routes
-router.use('/api/todos', todosRoutes);
 
 module.exports = router;
